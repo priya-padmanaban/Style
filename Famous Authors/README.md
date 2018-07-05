@@ -25,7 +25,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - Arthur Clark
 
-  - Mary Shelley (Alexandra)
+  - Mary Shelley (Alexandra)(Completed: 10,150 Words)
 
   - Isaac Asimov
 
