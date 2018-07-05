@@ -21,7 +21,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - Ernest Hemingway
 
-  - F Scott Fitzgerald (Alexandra)
+  - F Scott Fitzgerald (Alexandra)(Completed: 10,174 Words)
 
   - Arthur Clark
 
