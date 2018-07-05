@@ -1,33 +1,34 @@
 Famous Authors Writing Samples
 
-A folder containt the writing samples for each author that we are analyzing. I made it separate so that we do not have to look
-through all the work to find it. I also listed each of author on the bottom so that we can keep track of everything here.
+  A folder containt the writing samples for each author that we are analyzing. I made it separate so that we do not have to
+  look through all the work to find it. I also listed each of author on the bottom so that we can keep track of everything
+  here.
 
 
 (Put your name next to the author you get samples from so that we can keep track of who has who)
 
-Howard Phillips Lovecraft
+  Howard Phillips Lovecraft
 
-The Brothers Grimm, Jacob and Wilhelm Grimm
+  The Brothers Grimm, Jacob and Wilhelm Grimm
 
-Agatha Christie
+  Agatha Christie
 
-John Steinbeck
+  John Steinbeck
 
-Mark Twain
+  Mark Twain
 
-Clive Staples Lewis
+  Clive Staples Lewis
 
-Edgar Allan Poe
+  Edgar Allan Poe
 
-Ernest Hemingway
+  Ernest Hemingway
 
-F Scott Fitzgerald (Alexandra)
+  F Scott Fitzgerald (Alexandra)
 
-Arthur Clark
+  Arthur Clark
 
-Mary Shelley (Alexandra)
+  Mary Shelley (Alexandra)
 
-Isaac Asimov
+  Isaac Asimov
 
-Jane Austen
+  Jane Austen
