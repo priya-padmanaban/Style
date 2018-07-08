@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style> ="font-family:verdana;" </style>
+    <title>Style</title>
+  </head>
+
+  <body onload="main()">
+    <h1>Style</h1>
+    <form>
+      
+      <!-- 
+      User's TextBox
+      Gives them a field to write their sample, contains a submit bar for them to submit it
+      -->
+      <fieldset>
+        <legend> Enter a Sample of Your Writing! </legend>
+        <p> 
+          <label> Submit at Least 1000 Words Here </label>
+          <textarea
+                 id = "myText"
+                 rows = "4"
+                 cols = "190" >your text here
+                 </textarea>
+          <!-- <input type="button" value="Submit" onclick="msg()"> -->
+          <button onclick="myFunction()">Click me</button>
+        </p>
+      </fieldset>
+
+
+      <!--
+      Author Info Here
+      We takes result from code and displays Author's Name + picture (maybe) for user
+      -->
+      <fieldset>
+        <legend>Your Author Here! </legend>
+        <p>
+        </p>
+      </fieldset>
+
+
+      <!--
+      User vs. Author Stats
+      Displays the stats of our user next to the stats we have on record for the author
+      -->
+      <fieldset>
+        <legend> Your Stats vs. Author Stats </legend>
+        <p>
+        <!--
+        Box 1: Author Stats
+        -->
+          <div id="container">
+            <div id="iframecontainer">
+              <div id="iframe">
+                <div id="iframewrapper">
+                <iframe frameborder="1" id="iframeResult" name="iframeResult"><
+                #document
+                <!Doctype html>
+                <html>
+                <head></head>
+                <body contenteditable="false">
+                  <h2> Author Stats </h2>
+                  <p id = "demo"> Your Stats </p>
+                </body>
+                </html>
+                </iframe>
+              </div>
+            </div>
+            <!--
+            Box 2: User Stats
+            -->
+            <div id="iframecontainer">
+              <div id="iframe">
+                <div id="iframewrapper">
+                <iframe frameborder="1" id="iframeResult" name="iframeResult"><
+                #document
+                <!Doctype html>
+                <html>
+                <head></head>
+                <body contenteditable="false">
+                  <h2> Author Stats </h2>
+                  <p id = "demo"> Author Stats </p>
+                </body>
+                </html>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
