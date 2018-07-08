@@ -29,4 +29,4 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - Isaac Asimov
 
-  - Jane Austen (Priya)
+  - Jane Austen (Priya) (Completed: 10,686 words)
