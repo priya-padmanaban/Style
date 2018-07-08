@@ -13,7 +13,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - John Steinbeck (Alexandra) (Completed: 15,164 Words)
 
-  - Mark Twain (Priya)
+  - Mark Twain (Priya) (Completed: 10,758 words)
 
   - Clive Staples Lewis
 
