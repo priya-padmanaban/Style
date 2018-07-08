@@ -13,20 +13,20 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - John Steinbeck (Alexandra) (Completed: 15,164 Words)
 
-  - Mark Twain (Priya) (Completed: 10,758 words)
+  - Mark Twain (Priya) (Completed: 10,758 Words)
 
-  - C.S. Lewis (Alexandra)
+  - C.S. Lewis (Alexandra) (Completed: 15,722 Words)
 
   - Edgar Allan Poe (Ray) (Completed: 11,515 Words)
 
-  - Ernest Hemingway (Priya) (Completed: 12,936 words)
+  - Ernest Hemingway (Priya) (Completed: 12,936 Words)
 
   - F Scott Fitzgerald (Alexandra)(Completed: 10,174 Words)
 
-  - Arthur Clark (Alexandra)
+  - Arthur Clark (Ray)
 
   - Mary Shelley (Alexandra)(Completed: 10,150 Words)
 
   - Isaac Asimov (Ray) (Completed: 11,199 Words)
 
-  - Jane Austen (Priya) (Completed: 10,686 words)
+  - Jane Austen (Priya) (Completed: 10,686 Words)
