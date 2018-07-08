@@ -19,7 +19,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - Edgar Allan Poe
 
-  - Ernest Hemingway (Priya)
+  - Ernest Hemingway (Priya) (Completed: 12,936 words)
 
   - F Scott Fitzgerald (Alexandra)(Completed: 10,174 Words)
 
