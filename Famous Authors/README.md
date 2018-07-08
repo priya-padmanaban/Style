@@ -17,7 +17,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - C.S. Lewis (Alexandra)
 
-  - Edgar Allan Poe (Ray) (Completed: 11,516 Words)
+  - Edgar Allan Poe (Ray) (Completed: 11,515 Words)
 
   - Ernest Hemingway (Priya) (Completed: 12,936 words)
 
