@@ -23,7 +23,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - F Scott Fitzgerald (Alexandra)(Completed: 10,174 Words)
 
-  - Arthur Clark (Ray)
+  - Arthur Clark (Ray)(Completed: 11,786 Words)
 
   - Mary Shelley (Alexandra)(Completed: 10,150 Words)
 
