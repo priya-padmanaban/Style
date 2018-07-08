@@ -7,7 +7,7 @@ A folder containt the writing samples for each author that we are analyzing. I m
 
   - Howard Phillips Lovecraft (Ray) (Completed: 12,335 Words)
 
-  - The Brothers Grimm, Jacob and Wilhelm Grimm (Ray) (Completed: - Words)
+  - The Brothers Grimm, Jacob and Wilhelm Grimm (Ray) (Completed: 10,410 Words)
 
   - Agatha Christie (Ray) (Completed: 12,013 Words)
 
