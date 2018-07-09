@@ -21,7 +21,7 @@ def process_corpus(corpus_name):
     input_file = corpus_name + ".zip"
     corpus_contents = unzip_corpus(input_file)
     
-    # 1. Toeknization
+    # 1. Tokenization
     
     # (a) Write the name of the corpus to stdout
     print("1. Corpus Name:", corpus_name)
@@ -38,13 +38,12 @@ def process_corpus(corpus_name):
         sentences = nltk.sent_tokenize(doc)
         
         for sentence in sentences:
-            # (c) Tokenize the words in each sentences of each document
+            # Tokenize the words in each sentences of each document
             words = nltk.word_tokenize(sentence)
             for word in words:
                 totalWords.append(word)
             
-            # 2. Part-of-Speech
-            # (a) Apply the default part-of-speech tagger to each tokenized sentence
+            # Part-of-Speech
             tagged = nltk.pos_tag(words)
             for tag in tagged:
                 totalTags.append(tag)
@@ -53,28 +52,22 @@ def process_corpus(corpus_name):
             print("\n", file=pos_file, end = "")
         print("\n", file=pos_file, end = "")
     
-    # Close the POS tag file
     pos_file.close()
     
-    # (d) Count the number of total words in the corpus and write the result to stdout
+    # number of total words in the corpus 
     wordCount = 0;
     wordCount = len(totalWords)
     print("2. Total Words in the Corpus:", wordCount)
 
-    # 3. Frequency
-
-    # (a) Write the vocabulary size of corpus to stdout
+    # Frequency
     flat_words = [word.lower() for word in totalWords]
     vocabCount = 0;
     vocabCount = len(set(flat_words))
     print("3. Vocabulary Size of the Corpus:", vocabCount)
     
-    # (b) Write the most frequent part-of-speech tag and it's frequency to stdout
-    
     tagged_fd = nltk.FreqDist(tag for (word, tag) in totalTags)
     print("4. The most frequent part-of-speech tag is", tagged_fd.most_common(1))
-    
-    # (c) Frequency of each unique word (lower case)
+
     
     # Frequency Output File
     freq_file = open(corpus_name + "-word-freq.txt", 'w')
@@ -84,7 +77,7 @@ def process_corpus(corpus_name):
     
     freq_file.close()
     
-    # (d) Conditional Frequency Distribution
+    # Conditional Frequency Distribution
     
     sys.stdout = open(corpus_name+"-pos-word-freq.txt",'w')
     
@@ -98,8 +91,7 @@ def process_corpus(corpus_name):
     sys.stdout = sys.__stdout__
 
     
-    # 4. Similar Words
-    # (a) Write most similar words to stdout
+    # Similar Words
     NNtags = []
     VBDtags = []
     JJtags = []
@@ -151,10 +143,8 @@ def process_corpus(corpus_name):
     print()
     
     # 5. Collocations
-    # Piazza: "You should create a nltk.Text object with the lowercase
-    #   words of the whole corpus, then call the collocations() method."
     co_text = nltk.Text(flat_words)
-    print("6. Collocatoins: ", end="")
+    print("6. Collocations: ", end="")
     co_text.collocations()
     
 
