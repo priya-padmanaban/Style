@@ -4,4 +4,6 @@ Done Entirely in HTML, Done on Sublime Text Editor, Tested on Safari
 style.html : html code for main part of our website. Has very basic functions but shows what is necessary to work.
 
 
-csslayout.html : playing around with the html code for formatting. Differences between style.html and csslayout.html include border, font color, background color, and border color. All the code we have in style.html also is not in csslayout.html 
+csslayout.html : playing around with the html code for formatting. Differences between style.html and csslayout.html 
+include border, font color, background color, and border color. All the code we have in style.html also is not in 
+csslayout.html 
