@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("button").click(function(){
+					$.ajax({
+						url: "https://people.ucsc.edu/~krschuma/test.py",
+						type: "POST",
+						data: {text: $("#USERTEXT").val()},
+						dataType: "text",
+						success: function(response){
+							printText(response);
+						},
+						error: function(response){
+							alert(response);
+						}
+					});
+				});
+			});
+			function printText(data){
+				document.getElementById("test").innerHTML = data;
+			}
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<textarea id = "USERTEXT" rows = "20" cols = "100"></textarea>
+			<div><button type="button"> Style </button></div>
+			<p id="test"></p>
+		</center>
+	</body>
+</html>
