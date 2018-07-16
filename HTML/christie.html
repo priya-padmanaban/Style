@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Style - Agatha Christie </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Style the header */
+header {
+    background-color: #11335A;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    font-size: 65px;
+    color: white;
+}
+
+span.b {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    border: 10px #11335A;        
+    background-color: white; 
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+</head>
+<body onload="main()"; style="background-color:#D1E2F6;">
+
+
+<header>
+  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> Agatha Christie</h2>
+</header>
+        <p>
+          Your author is Agatha Christie!
+        </p>
+        <p> 
+          <img src="christie.jpg" width="200" height="200">
+        </p>
+        <p> 
+          Dame Agatha Mary Clarissa Christie, Lady Mallowan is best known for her detective novels. She has written the world's longest running play, 'The Mousetrap', and is listed as the best selling novelist of all times in the Guinness Book of World Records. In 1955, she won the Grand Master Award, the highest honor from the Mystery Writers of America.
+        </p>
+        <p>
+          <span class= "b"> your stats here </span> 
+          <img src="dogreading1.jpg.gif" width="200" height="200">
+          <span class="b"> author stats here </span>
+        </p>
+
+    <footer>
+      <p>
+      <label> Wikipedia Page Here! </label>
+        <a href="https://en.wikipedia.org/wiki/Agatha_Christie">Agatha Christie</a>  
+      </p>
+  </footer>
+</body>
+</html>
