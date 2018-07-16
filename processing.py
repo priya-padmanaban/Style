@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-
+from __future__ import division
 import nltk
 import zipfile
 import argparse
 import sys
+from nltk.corpus import inaugural
 # import csv
 
 
@@ -19,13 +20,20 @@ def unzip_corpus(input_file):
                 fn.endswith(".txt")]
     return contents
 
+def read_txt(input_file):
+    contents = input_file.read().decode('utf-8')
+    return contents
+
 
 ###############################################################################
 ## Stub Functions #############################################################
 ###############################################################################
 def process_corpus(corpus_name):
     input_file = corpus_name + ".zip"
-    corpus_contents = unzip_corpus(input_file)
+    #corpus_contents = unzip_corpus(input_file)
+
+    # testing
+    corpus_contents = input_file.read().decode('utf-8')
 
     # 1. Tokenizing
 
@@ -59,6 +67,11 @@ def process_corpus(corpus_name):
         print("\n", file=pos_file, end="")
 
     pos_file.close()
+
+    # average sentence length
+    for fileid in inaugural.fileids():
+        avg = sum(len(sent) for sent in inaugural.sents(fileids=[fileid])) / len(inaugural.sents(fileids=[fileid]))
+        print(fileid, avg)
 
     # number of total words in the corpus 
     wordCount = 0
@@ -157,14 +170,14 @@ def process_corpus(corpus_name):
 ###############################################################################
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Style')
-    parser.add_argument('--zip', required=True, dest="corpus", metavar='NAME',
+    parser.add_argument('--corpus', required=True, dest="corpus", metavar='NAME',
                         help='Which corpus to process')
 
     args = parser.parse_args()
 
     corpus_name = args.corpus
 
-    if corpus_name == "samples":
+    if corpus_name == "samples" or "samplesv2":
         process_corpus(corpus_name)
     else:
         print("Unknown corpus name: {0}".format(corpus_name))
