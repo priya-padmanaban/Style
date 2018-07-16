@@ -1,4 +1,8 @@
 Done Entirely in HTML, Done on Sublime Text Editor, Tested on Safari
 
 
-style.html : html code for main part of our website. Has very basic functions but shows what is necessary to work.
+style.html : html code for main part of our website. Is the first page of the website. Has the text box for the user to 
+input their writing sample.
+
+
+'author'.html : the page for each author that the code will go to after it submits.

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Style - Jane Austen</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+/* Style the header */
+header {
+    background-color: #11335A;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    font-size: 65px;
+    color: white;
+}
+span.b {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    border: 10px #11335A;        
+    background-color: white; 
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+</head>
+<body onload="main()"; style="background-color:#D1E2F6;">
+
+
+<header>
+  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> Jane Austen </h2>
+</header>
+        <p>
+          Your author is Jane Austen!
+        </p>
+        <p> 
+          <img src="austen.jpg" width="200" height="200">
+        </p>
+        <p> 
+          Jane Austen was an English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage in the pursuit of favourable social standing and economic security.  There is little biographical information about Jane Austen's life except the few letters that survive and the biographical notes her family members wrote.
+        </p>
+        <p>
+          <span class= "b"> your stats here </span> 
+          <img src="dogreading1.jpg.gif" width="200" height="200">
+          <span class="b"> author stats here </span>
+        </p>
+
+    <footer>
+      <p>
+      <label> Wikipedia Page Here! </label>
+        <a href="https://en.wikipedia.org/wiki/Jane_Austen">Jane Austen</a>  
+      </p>
+  </footer>
+</body>
+</html>
