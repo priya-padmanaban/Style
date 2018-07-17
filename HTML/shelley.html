@@ -7,7 +7,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -16,7 +15,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 /* Style the header */
 header {
     background-color: #11335A;
@@ -26,16 +24,13 @@ header {
     font-size: 65px;
     color: white;
 }
-
 span.b {
     display: inline-block;
     width: 400px;
     height: 400px;
     padding: 5px;
-    border: 10px #11335A;        
-    background-color: white; 
-
-
+    border: 10px #11335A;
+    background-color: white;
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -49,27 +44,27 @@ span.b {
 
 
 <header>
-  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> Mary Shelley </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> Mary Shelley </h2>
 </header>
-        <p>
+        <p style="font-size: 50px">
           Your author is Mary Shelley!
         </p>
-        <p> 
-          <img src="shelley.jpg" width="200" height="200">
+        <p>
+          <img src={{url_for("static", filename="shelley.jpg", width=100, height=100)}}>
         </p>
-        <p> 
+        <p>
           Mary Wollstonecraft Shelley was born on August 30, 1797 in London, England. While she is most known for her book 'Frankenstein' and for her husband's works, she has written many other books. Her books, which have been studied more since the 1970's, expressed her radical political ideas.
         </p>
         <p>
-          <span class= "b"> your stats here </span> 
-          <img src="dogreading1.jpg.gif" width="200" height="200">
+          <span class= "b"> your stats here </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
           <span class="b"> author stats here </span>
         </p>
 
     <footer>
       <p>
       <label> Wikipedia Page Here! </label>
-        <a href="https://en.wikipedia.org/wiki/Mary_Shelley">Mary Shelley</a>  
+        <a href="https://en.wikipedia.org/wiki/Mary_Shelley">Mary Shelley</a>
       </p>
   </footer>
 </body>

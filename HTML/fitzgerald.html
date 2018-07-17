@@ -7,7 +7,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -16,7 +15,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 /* Style the header */
 header {
     background-color: #11335A;
@@ -26,16 +24,13 @@ header {
     font-size: 65px;
     color: white;
 }
-
 span.b {
     display: inline-block;
     width: 400px;
     height: 400px;
     padding: 5px;
-    border: 10px #11335A;        
-    background-color: white; 
-
-
+    border: 10px #11335A;
+    background-color: white;
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -49,27 +44,27 @@ span.b {
 
 
 <header>
-  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> F. Scott Fitzgerald </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> F. Scott Fitzgerald </h2>
 </header>
-        <p>
+        <p style="font-size: 50px">
           Your author is F. Scott Fitzgerald!
         </p>
-        <p> 
-          <img src="fitzgerald.jpg" width="200" height="200">
+        <p>
+          <img src={{url_for("static", filename="fitzgerald.jpg", width=100, height=100)}}>
         </p>
-        <p> 
+        <p>
           Fitzgerald, born in 1896, is considered to be one of the greatest American authors, though he did not achieve much success while he was alive. His masterpiece, 'The Great Gatsby', was not popular until after his death. He achieved fame and wealth from his first book, but since his others did not do well and he had a lavish lifestyle, he was constantly in a lot of debt.
         </p>
         <p>
-          <span class= "b"> your stats here </span> 
-          <img src="dogreading1.jpg.gif" width="200" height="200">
+          <span class= "b"> your stats here </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
           <span class="b"> author stats here </span>
         </p>
 
     <footer>
       <p>
       <label> Wikipedia Page Here! </label>
-        <a href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald">F. Scott Fitzgerald</a>  
+        <a href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald">F. Scott Fitzgerald</a>
       </p>
   </footer>
 </body>

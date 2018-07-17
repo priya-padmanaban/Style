@@ -1,13 +1,12 @@
 <html>
 <head>
-<title>Style - Edgar Allan Poe </title>
+<title>Style - F. Scott Fitzgerald </title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -16,7 +15,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 /* Style the header */
 header {
     background-color: #11335A;
@@ -26,16 +24,13 @@ header {
     font-size: 65px;
     color: white;
 }
-
 span.b {
     display: inline-block;
     width: 400px;
     height: 400px;
     padding: 5px;
-    border: 10px #11335A;        
-    background-color: white; 
-
-
+    border: 10px #11335A;
+    background-color: white;
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -49,27 +44,27 @@ span.b {
 
 
 <header>
-  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> Edgar Allan Poe</h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> Edgar Allan Poe</h2>
 </header>
-        <p>
+        <p style="font-size: 50px">
           Your author is Edgar Allan Poe!
         </p>
-        <p> 
-          <img src="poe.jpg" width="200" height="200">
-        </p>
-        <p> 
-          Edgar Allan Poe was born in America in 1809. He was a writer, editor, and literary critic; and he was a central figure of Romanticism in the United States. He was the first American author to try to earn a living through writing alone.
+        <p>
+          <img src={{url_for("static", filename="poe.jpg", width=100, height=100)}}>
         </p>
         <p>
-          <span class= "b"> your stats here </span> 
-          <img src="dogreading1.jpg.gif" width="200" height="200">
+          Fitzgerald, born in 1896, is considered to be one of the greatest American authors, though he did not achieve much success while he was alive. His masterpiece, 'The Great Gatsby', was not popular until after his death. He achieved fame and wealth from his first book, but since his others did not do well and he had a lavish lifestyle, he was constantly in a lot of debt.
+        </p>
+        <p>
+          <span class= "b"> your stats here </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
           <span class="b"> author stats here </span>
         </p>
 
     <footer>
       <p>
       <label> Wikipedia Page Here! </label>
-        <a href="https://en.wikipedia.org/wiki/Edgar_Allan_Poe">Edgar Allan Poe</a>  
+        <a href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald">F. Scott Fitzgerald</a>
       </p>
   </footer>
 </body>

@@ -7,7 +7,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -16,7 +15,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 /* Style the header */
 header {
     background-color: #11335A;
@@ -26,16 +24,13 @@ header {
     font-size: 65px;
     color: white;
 }
-
 span.b {
     display: inline-block;
     width: 400px;
     height: 400px;
     padding: 5px;
-    border: 10px #11335A;        
-    background-color: white; 
-
-
+    border: 10px #11335A;
+    background-color: white;
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -49,27 +44,27 @@ span.b {
 
 
 <header>
-  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> Arthur C. Clarke </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width=100, height=100)}}> Arthur C. Clarke </h2>
 </header>
-        <p>
+        <p style="font-size: 50px">
           Your author is Arthur C. Clarke!
         </p>
-        <p> 
-          <img src="clark.jpg" width="200" height="200">
+        <p>
+         <img src={{url_for("static", filename="clark.jpg", width=100, height=100)}}>
         </p>
-        <p> 
+        <p>
           Clark is a British science fiction author born in 1917. He is most famous for cowriting the film '2001: A Space Odyssey', though he wrote many books and worked in other fields. In 1998, he was knighted. He moved to Sri Lanka in 1956 to pursue his interest in scuba diving, and lived there until he died in 2008.
         </p>
         <p>
-          <span class= "b"> your stats here </span> 
-          <img src="dogreading1.jpg.gif" width="200" height="200">
+          <span class= "b"> your stats here </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
           <span class="b"> author stats here </span>
         </p>
 
     <footer>
       <p>
       <label> Wikipedia Page Here! </label>
-        <a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Arthur C. Clarke</a>  
+        <a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Arthur C. Clarke</a>
       </p>
   </footer>
 </body>
