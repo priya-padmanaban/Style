@@ -151,9 +151,9 @@ def process_corpus(corpus_name):
     print("RBratio:", len(RBtags)/len(totalwords))
 
     download_dir = "authors.csv"
-    csv = open(download_dir, "w")
+    csv = open(download_dir, "a")
     columnTitleRow = "author,avgword,avgsent,punctratio,nnratio,vbdratio,rbratio,jjratio\n"
-    csv.write(columnTitleRow)
+    #csv.write(columnTitleRow)
     row = corpus_name + "," + str(waverage) + "," + str(saverage) + "," + str(punctratio) + "," + str(NNratio) + "," + str(VBDratio) + "," + str(RBratio) + "," + str(JJratio) + "\n"
     csv.write(row)
 
