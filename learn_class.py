@@ -33,7 +33,7 @@ from sklearn import preprocessing, ensemble
 from sklearn.externals import joblib
 test_file = "testing.csv"
 df1 = pd.read_csv(test_file, header = 0)
-test_data = df1.iloc[:,0:]
+test_data = df1.iloc[:,1:]
 model2 = joblib.load("file.pkl")
 preds2 = model2.predict(test_data)
 return(preds2[0])
