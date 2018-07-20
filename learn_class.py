@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn import preprocessing, ensemble
 from sklearn.externals import joblib
 
-input_file = "samples.csv"
+input_file = "author.csv"
 df = pd.read_csv(input_file, header = 0)
-test_file = "samples1.csv"
+test_file = "testing.csv"
 df1 = pd.read_csv(test_file, header = 0)
 
 
@@ -31,7 +31,7 @@ s = joblib.dump(model, "file.pkl")
 import pandas as pd
 from sklearn import preprocessing, ensemble
 from sklearn.externals import joblib
-test_file = "samples1.csv"
+test_file = "testing.csv"
 df1 = pd.read_csv(test_file, header = 0)
 test_data = df1.iloc[:,1:]
 model2 = joblib.load("file.pkl")
