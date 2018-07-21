@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Style - John Steinbeck</title>
+<title>Style - F. Scott Fitzgerald </title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -29,8 +29,8 @@ span.b {
     width: 400px;
     height: 400px;
     padding: 5px;
-    border: 10px #11335A;        
-    background-color: white; 
+    border: 10px #11335A;
+    background-color: white;
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -44,16 +44,16 @@ span.b {
 
 
 <header>
-  <h2>Style <img src="dogreading1.jpg.gif" width="100" height="100"> John Steinbeck </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> F. Scott Fitzgerald </h2>
 </header>
+        <p style="font-size: 50px">
+          Your author is F. Scott Fitzgerald!
+        </p>
         <p>
-          Your author is John Steinbeck!
+          <img src={{url_for("static", filename="fitzgerald.jpg", width=100, height=100)}}>
         </p>
-        <p> 
-          <img src="steinbeck.jpg" width="200" height="200">
-        </p>
-        <p> 
-          John Steinbeck, who was born in 1902, was an American author who wrote books centered in Central California. He wrote 27 books that dealt with fate and injustice that everyday characters had to face. Steinbeck won the Pulitzer Prize in 1939 for 'The Grapes of Wrath', ahd the Nobel Prize in Literature in 1962 for his writings.
+        <p>
+          Fitzgerald, born in 1896, is considered to be one of the greatest American authors, though he did not achieve much success while he was alive. His masterpiece, 'The Great Gatsby', was not popular until after his death. He achieved fame and wealth from his first book, but since his others did not do well and he had a lavish lifestyle, he was constantly in a lot of debt.
         </p>
         <p>
           <span class= "b"> 
@@ -64,22 +64,23 @@ span.b {
             Percent of Verbs: {{vr}} <br>
             Percent of Adverbs: {{avr}} <br>
             Percent of Adjectives: {{ajr}} <br>
-          </span> 
-          <img src="dogreading1.jpg.gif" width="200" height="200">
-          <span class="b"> Author Stats Here! <br>
-          Average Word Length: 3.433 <br>
-          Average Sentence Length: 12.211 <br>
-          Percent of Nouns: 12.0% <br>
-          Percent of Verbs: 6.8% <br>
-          Percent of Adverbs: 5.9% <br>
-          Percent of Adjectives: 4.6% <br>
           </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
+          <span class="b">  
+              Author Stats Here!<br> 
+              Average Word Length: 3.715<br> 
+              Average sentence Length: 26.366<br> 
+              Percent of Nouns: 14.763%<br> 
+              Percent of Verbs: 7.406%<br> 
+              Percent of Adverbs: 4.307%<br> 
+              Percent of Adjectives: 7.847% <br>
+            </span>
         </p>
 
     <footer>
       <p>
       <label> Wikipedia Page Here! </label>
-        <a href="https://en.wikipedia.org/wiki/John_Steinbeck">John Steinbeck</a>  
+        <a href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald">F. Scott Fitzgerald</a>
       </p>
   </footer>
 </body>
