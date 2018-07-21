@@ -40,32 +40,41 @@ span.b {
 }
 </style>
 </head>
-<body onload="main()"; style="background-color:#D1E2F6;">
+<body onload="main()" ; style="background-color:#D1E2F6;">
 
 
 <header>
-  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> CS Lewis </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif" )}}> CS Lewis </h2>
 </header>
         <p style="font-size: 50px">
           Your author is CS Lewis!
         </p>
         <p>
-          <img src={{url_for("static", filename="lewis.jpg", width=100, height=100)}}>
+          <img src={{url_for("static", filename="lewis.jpg" )}}>
         </p>
         <p>
           Clive Staples Lewis was a British novelist, poet, academic, medievalist, literary critic, essayist, lay theologian, broadcaster, lecturer, and Christian apologist.  Lewis wrote more than 30 books which have been translated into more than 30 languages and have sold millions of copies. The books that make up The Chronicles of Narnia have sold the most and have been popularised on stage, TV, radio, and cinema. His philosophical writings are widely cited by Christian apologists from many denominations.
         </p>
         <p>
-          <span class= "b"> your stats here </span>
-          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
-          <span class="b"> Author Stats Here <br>
+          <span class= "b">
+            Your stats here! <br>
+            Average Word Length: {{awl}} <br>
+            Average Sentence Length: {{asl}} <br>
+            Percent of Nouns: {{nr}} <br>
+            Percent of Verbs: {{vr}} <br>
+            Percent of Adverbs: {{avr}} <br>
+            Percent of Adjectives: {{ajr}} <br>
+          </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif" )}}>
+          <span class="b">
+          Author Stats Here! <br>
           Average Word Length: 3.551 <br>
           Average Sentence Length: 16.672 <br>
           Percent of Nouns: 9.5% <br>
           Percent of Verbs: 6.7% <br>
           Percent of Adverbs: 6.0% <br>
           Percent of Adjectives: 4.5% <br>
-            </span>
+          </span>
         </p>
 
     <footer>
