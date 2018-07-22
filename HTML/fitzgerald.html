@@ -40,33 +40,41 @@ span.b {
 }
 </style>
 </head>
-<body onload="main()"; style="background-color:#D1E2F6;">
+<body onload="main()" ; style="background-color:#D1E2F6;">
 
 
 <header>
-  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> F. Scott Fitzgerald </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif" )}}> F. Scott Fitzgerald </h2>
 </header>
         <p style="font-size: 50px">
           Your author is F. Scott Fitzgerald!
         </p>
         <p>
-          <img src={{url_for("static", filename="fitzgerald.jpg", width=100, height=100)}}>
+          <img src={{url_for("static", filename="fitzgerald.jpg" )}}>
         </p>
         <p>
           Fitzgerald, born in 1896, is considered to be one of the greatest American authors, though he did not achieve much success while he was alive. His masterpiece, 'The Great Gatsby', was not popular until after his death. He achieved fame and wealth from his first book, but since his others did not do well and he had a lavish lifestyle, he was constantly in a lot of debt.
         </p>
         <p>
-          <span class= "b"> your stats here </span>
-          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
-          <span class="b">  
-              Author Stats Here!<br> 
-              Average Word Length: 3.715<br> 
-              Average sentence Length: 26.366<br> 
-              Percent of Nouns: 14.763%<br> 
-              Percent of Verbs: 7.406%<br> 
-              Percent of Adverbs: 4.307%<br> 
-              Percent of Adjectives: 7.847% <br>
-            </span>
+          <span class= "b">
+            Your stats here! <br>
+            Average Word Length: {{awl}} <br>
+            Average Sentence Length: {{asl}} <br>
+            Percent of Nouns: {{nr}} <br>
+            Percent of Verbs: {{vr}} <br>
+            Percent of Adverbs: {{avr}} <br>
+            Percent of Adjectives: {{ajr}} <br>
+          </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif" )}}>
+          <span class="b">
+            Author stats here!<br>
+            Average Word Length: 3.715<br>
+            Average sentence Length: 26.366<br>
+            Percent of Nouns: 14.763%<br>
+            Percent of Verbs: 7.406%<br>
+            Percent of Adverbs: 4.307%<br>
+            Percent of Adjectives: 7.847% <br>
+          </span>
         </p>
 
     <footer>

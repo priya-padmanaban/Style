@@ -40,32 +40,41 @@ span.b {
 }
 </style>
 </head>
-<body onload="main()"; style="background-color:#D1E2F6;">
+<body onload="main()" ; style="background-color:#D1E2F6;">
 
 
 <header>
-  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> H.P. Lovecraft </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif" )}}> H.P. Lovecraft </h2>
 </header>
         <p style="font-size: 50px">
           Your author is H.P. Lovecraft!
         </p>
         <p>
-          <img src={{url_for("static", filename="lovecraft.jpg", width=100, height=100)}}>
+          <img src={{url_for("static", filename="lovecraft.jpg" )}}>
         </p>
         <p>
           Howard Phillips Lovecraft was an American writer who achieved posthumous fame through his influential works of horror fiction. He was virtually unknown and published only in pulp magazines before he died in poverty, but he is now regarded as one of the most significant 20th-century authors in his genre.
         </p>
         <p>
-          <span class= "b"> your stats here </span>
-          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
-          <span class="b"> Author Stats Here <br>
+          <span class= "b">
+            Your stats here! <br>
+            Average Word Length: {{awl}} <br>
+            Average Sentence Length: {{asl}} <br>
+            Percent of Nouns: {{nr}} <br>
+            Percent of Verbs: {{vr}} <br>
+            Percent of Adverbs: {{avr}} <br>
+            Percent of Adjectives: {{ajr}} <br>
+          </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif" )}}>
+          <span class="b">
+          Author Stats Here! <br>
           Average Word Length: 4.353 <br>
           Average Sentence Length: 31.454 <br>
           Percent of Nouns: 14.1% <br>
           Percent of Verbs: 6.3% <br>
           Percent of Adverbs: 4.9% <br>
           Percent of Adjectives: 7.9% <br>
-            </span>
+          </span>
         </p>
 
     <footer>

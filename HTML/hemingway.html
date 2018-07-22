@@ -40,32 +40,41 @@ span.b {
 }
 </style>
 </head>
-<body onload="main()"; style="background-color:#D1E2F6;">
+<body onload="main()" ; style="background-color:#D1E2F6;">
 
 
 <header>
-  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif", width="100", height="100")}}> Ernest Hemingway </h2>
+  <h2>Style <img src={{url_for("static", filename="dogreading85.jpg.gif" )}}> Ernest Hemingway </h2>
 </header>
         <p style="font-size: 50px">
           Your author is Ernest Hemingway!
         </p>
         <p>
-            <img src={{url_for("static", filename="hemingway.jpg", width=100, height=100)}}>
+            <img src={{url_for("static", filename="hemingway.jpg" )}}>
         </p>
         <p>
           Ernest Hemingway's economical and understated style—which he termed the Iceberg Theory—had a strong influence on 20th-century fiction, while his adventurous lifestyle and his public image brought him admiration from later generations.  He published seven novels, six short-story collections, and two non-fiction works. Three of his novels, four short story collections, and three non-fiction works were published posthumously. Many of his works are considered classics of American literature.
         </p>
         <p>
-          <span class= "b"> your stats here </span>
-          <img src={{url_for("static", filename="dogreading1.jpg.gif", width=100, height=100)}}>
-          <span class="b"> Author Stats Here! <br>
+          <span class= "b">
+            Your stats here! <br>
+            Average Word Length: {{awl}} <br>
+            Average Sentence Length: {{asl}} <br>
+            Percent of Nouns: {{nr}} <br>
+            Percent of Verbs: {{vr}} <br>
+            Percent of Adverbs: {{avr}} <br>
+            Percent of Adjectives: {{ajr}} <br>
+          </span>
+          <img src={{url_for("static", filename="dogreading1.jpg.gif" )}}>
+          <span class="b">
+          Author Stats Here! <br>
           Average Word Length: 3.533 <br>
           Average Sentence Length: 16.001 <br>
           Percent of Nouns: 12.726% <br>
           Percent of Verbs: 7.326% <br>
           Percent of Adverbs: 5.888% <br>
           Percent of Adjectives: 5.580% <br>
-            </span>
+          </span>
         </p>
 
     <footer>
