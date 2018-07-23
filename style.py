@@ -110,6 +110,8 @@ def result():
     # get text from textbox
     data = request.form.get('text')
 
+    print(len(data))
+
     totalwords = []
     totalsent = []
     totaltags = []
@@ -161,16 +163,6 @@ def result():
     JJratio = len(JJtags) / len(totalwords)
     RBratio = len(RBtags) / len(totalwords)
 
-    # truncate to 3 decimal places and add %
-    NNratio = NNratio * 100
-    ntrunc = '%.3f' % (NNratio)
-    VBDratio = VBDratio * 100
-    vtrunc = '%.3f' % (VBDratio)
-    JJratio = JJratio * 100
-    jtrunc = '%.3f' % (JJratio)
-    RBratio = RBratio * 100
-    rtrunc = '%.3f' % (RBratio)
-
     # create csv for machine learning model
     open('user.csv', 'w').close()  # erase file
     download_dir = "user.csv"
@@ -188,6 +180,16 @@ def result():
     test_data = df1.iloc[:, 1:]
     model2 = joblib.load("file.pkl")
     preds2 = model2.predict(test_data)
+
+    # truncate to 3 decimal places and add %
+    NNratio = NNratio * 100
+    ntrunc = '%.3f' % (NNratio)
+    VBDratio = VBDratio * 100
+    vtrunc = '%.3f' % (VBDratio)
+    JJratio = JJratio * 100
+    jtrunc = '%.3f' % (JJratio)
+    RBratio = RBratio * 100
+    rtrunc = '%.3f' % (RBratio)
 
     # put author guess and stats into an array
     response = []

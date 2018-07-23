@@ -10,7 +10,10 @@ from sklearn import preprocessing, ensemble
 from sklearn.externals import joblib
 
 def process_corpus():
-    corpus_contents = ' '.join(sys.argv[1:])
+    #corpus_contents = ' '.join(sys.argv[1:])
+
+    inputfile = corpus_name + ".txt"
+    corpus_contents = open(inputfile, 'r').read()
 
     totalwords = []
     totalsent = []
@@ -63,15 +66,7 @@ def process_corpus():
     JJratio = len(JJtags)/len(totalwords)
     RBratio =len(RBtags)/len(totalwords)
 
-    # truncate to 3 decimal places and add %
-    NNratio = NNratio*100
-    ntrunc = '%.3f'%(NNratio)
-    VBDratio = VBDratio*100
-    vtrunc = '%.3f'%(VBDratio)
-    JJratio = JJratio*100
-    jtrunc = '%.3f'%(JJratio)
-    RBratio = RBratio*100
-    rtrunc = '%.3f'%(RBratio)
+   
 
     # create csv for machine learning model
     open('user.csv', 'w').close() #erase file
@@ -90,6 +85,16 @@ def process_corpus():
     model2 = joblib.load("file.pkl")
     preds2 = model2.predict(test_data)
 
+     # truncate to 3 decimal places and add %
+    NNratio = NNratio*100
+    ntrunc = '%.3f'%(NNratio)
+    VBDratio = VBDratio*100
+    vtrunc = '%.3f'%(VBDratio)
+    JJratio = JJratio*100
+    jtrunc = '%.3f'%(JJratio)
+    RBratio = RBratio*100
+    rtrunc = '%.3f'%(RBratio)
+
     # put author guess and stats into an array
     response = []
     response.append(preds2[0])
@@ -105,4 +110,12 @@ def process_corpus():
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Style')
+    parser.add_argument('--corpus', required=True, dest="corpus", metavar='NAME',  help='what text file?')
+
+    args = parser.parse_args()
+    
+    corpus_name = args.corpus
+
     process_corpus()
