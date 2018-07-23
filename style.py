@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.externals import joblib
 app = Flask(__name__)
 
+# direct user to author page with user statistics
 
 @app.route("/steinbeck")
 def steinbeck():
@@ -98,15 +99,16 @@ def christie():
                            ajr=request.args.get("ajr"))
 
 
+# directs to homepage
 @app.route("/style")
 def get_input():
     return render_template('homePage.html')
 
-
+# processing text
 @app.route("/style", methods=["GET", "POST"])
 def result():
+    # get text from textbox
     data = request.form.get('text')
-    # corpus_contents = ' '.join(sys.argv[1:])
 
     totalwords = []
     totalsent = []
@@ -114,7 +116,7 @@ def result():
     sentcount = 0
 
     # tokenize into sentences
-    sentences = nltk.sent_tokenize(data) # corpus_contents
+    sentences = nltk.sent_tokenize(data)
 
     # tokenize into words and create part of speech tags
     for sentence in sentences:
@@ -197,6 +199,7 @@ def result():
     response.append(str(rtrunc) + "%")
     response.append(str(jtrunc) + "%")
 
+    # redirecting to appropriate author function with the user stats
     if response[0] == "John Steinbeck":
         return redirect(url_for("steinbeck", awl=response[1], asl=response[2], nr=response[3], vr=response[4], avr=response[5],
                                 ajr=response[6]))
