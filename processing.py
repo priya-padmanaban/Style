@@ -10,54 +10,31 @@ import pandas as pd
 from sklearn import preprocessing, ensemble
 from sklearn.externals import joblib
 
-
-###############################################################################
-## Utility Functions ##########################################################
-###############################################################################
-# This method takes the path to a zip archive and reads the raw contents of the
-# file.
-
-def unzip_corpus(input_file):
-    zip_archive = zipfile.ZipFile(input_file)
-    contents = [zip_archive.open(fn, 'rU').read().decode('utf-8') for fn in zip_archive.namelist() if
-                fn.endswith(".txt")]
-    return contents
-
-def read_txt(input_file):
-    contents = input_file.read().decode('utf-8')
-    return contents
-
-
-###############################################################################
-## Stub Functions #############################################################
-###############################################################################
-def process_corpus(corpus_name):
-    input_file = corpus_name + ".zip"
-    corpus_contents = unzip_corpus(input_file)
+def process_corpus():
+    corpus_contents = ' '.join(sys.argv[1:])
 
     totalwords = []
     totalsent = []
     totaltags = []
     sentcount = 0
 
-    for doc in corpus_contents:
-        sentences = nltk.sent_tokenize(doc)
+    sentences = nltk.sent_tokenize(corpus_contents)
 
-        for sentence in sentences:
-            totalsent.append(sentence)
-            sentcount = sentcount + 1
-            words = nltk.word_tokenize(sentence)
-            for word in words:
-                totalwords.append(word)
-            tagged = nltk.pos_tag(words)
-            for tag in tagged:
-                totaltags.append(tag)
-                string = nltk.tuple2str(tag)
+    for sentence in sentences:
+        totalsent.append(sentence)
+        sentcount = sentcount + 1
+        words = nltk.word_tokenize(sentence)
+        for word in words:
+            totalwords.append(word)
+        tagged = nltk.pos_tag(words)
+        for tag in tagged:
+            totaltags.append(tag)
+            string = nltk.tuple2str(tag)
 
-        waverage = sum(len(word) for word in totalwords) / len(totalwords)
-        wtrunc = '%.3f'%(waverage)
-        saverage = len(totalwords) / sentcount
-        strunc = '%.3f'%(saverage)
+    waverage = sum(len(word) for word in totalwords) / len(totalwords)
+    wtrunc = '%.3f'%(waverage)
+    saverage = len(totalwords) / sentcount
+    strunc = '%.3f'%(saverage)
 
     NNtags = []
     VBDtags = []
@@ -92,7 +69,6 @@ def process_corpus(corpus_name):
     rtrunc = '%.3f'%(RBratio)
 
     open('user.csv', 'w').close() #erase file
-
     download_dir = "user.csv"
     csv = open(download_dir, "a")
     columnTitleRow = "author,avgword,avgsent,punctratio,nnratio,vbdratio,rbratio,jjratio\n"
@@ -115,21 +91,9 @@ def process_corpus(corpus_name):
     response.append(str(vtrunc) + "%")
     response.append(str(jtrunc) + "%")
     response.append(str(rtrunc) + "%")
-    print(response)
-
-    print(preds2[0])
-
+    
     return(response)
 
 
-###############################################################################
-## Program Entry Point ########################################################
-###############################################################################
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Style')
-    parser.add_argument('--corpus', required=True, dest="corpus", metavar='NAME',
-                        help='Which corpus to process')
-
-    args = parser.parse_args()
-    corpus_name = args.corpus
-    process_corpus(corpus_name)
+    process_corpus()
