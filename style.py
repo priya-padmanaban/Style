@@ -194,8 +194,8 @@ def result():
     response.append(str(strunc))
     response.append(str(ntrunc) + "%")
     response.append(str(vtrunc) + "%")
-    response.append(str(jtrunc) + "%")
     response.append(str(rtrunc) + "%")
+    response.append(str(jtrunc) + "%")
 
     if response[0] == "John Steinbeck":
         return redirect(url_for("steinbeck", awl=response[1], asl=response[2], nr=response[3], vr=response[4], avr=response[5],
