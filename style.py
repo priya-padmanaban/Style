@@ -86,7 +86,7 @@ def lewis():
 
 
 @app.route("/clarke")
-def clark():
+def clarke():
     return render_template("clarke.html", awl=request.args.get("awl"), asl=request.args.get("asl"),
                            nr=request.args.get("nr"), vr=request.args.get("vr"), avr=request.args.get("avr"),
                            ajr=request.args.get("ajr"))
