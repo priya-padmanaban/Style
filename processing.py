@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 from __future__ import division
 import nltk
-import zipfile
 import argparse
 import sys
 from nltk.corpus import inaugural
@@ -18,8 +17,10 @@ def process_corpus():
     totaltags = []
     sentcount = 0
 
+    # tokenize into sentences
     sentences = nltk.sent_tokenize(corpus_contents)
 
+    # tokenize into words and create part of speech tags
     for sentence in sentences:
         totalsent.append(sentence)
         sentcount = sentcount + 1
@@ -31,11 +32,13 @@ def process_corpus():
             totaltags.append(tag)
             string = nltk.tuple2str(tag)
 
+    # calculate word and sentence average
     waverage = sum(len(word) for word in totalwords) / len(totalwords)
     wtrunc = '%.3f'%(waverage)
     saverage = len(totalwords) / sentcount
     strunc = '%.3f'%(saverage)
 
+    # add up total number of pos tags
     NNtags = []
     VBDtags = []
     JJtags = []
@@ -53,12 +56,14 @@ def process_corpus():
         elif x[1] == "." or "," or ";" or "-":
             punctags.append(x)
 
+    # calculate part of speech ratios
     punctratio = len(punctags)/len(totalwords)
     NNratio = len(NNtags)/len(totalwords)
     VBDratio = len(VBDtags)/len(totalwords)
     JJratio = len(JJtags)/len(totalwords)
     RBratio =len(RBtags)/len(totalwords)
 
+    # truncate to 3 decimal places and add %
     NNratio = NNratio*100
     ntrunc = '%.3f'%(NNratio)
     VBDratio = VBDratio*100
@@ -68,6 +73,7 @@ def process_corpus():
     RBratio = RBratio*100
     rtrunc = '%.3f'%(RBratio)
 
+    # create csv for machine learning model
     open('user.csv', 'w').close() #erase file
     download_dir = "user.csv"
     csv = open(download_dir, "a")
@@ -77,12 +83,14 @@ def process_corpus():
     csv.write(row)
     csv.close()
 
+    # use already generated pickle file to predict author
     test_file = "user.csv"
     df1 = pd.read_csv(test_file, header = 0)
     test_data = df1.iloc[:,1:]
     model2 = joblib.load("file.pkl")
     preds2 = model2.predict(test_data)
 
+    # put author guess and stats into an array
     response = []
     response.append(preds2[0])
     response.append(str(wtrunc))
