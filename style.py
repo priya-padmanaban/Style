@@ -215,7 +215,7 @@ def result():
     elif response[0] == "Jacob Grimm and Wilhelm Grimm":
         return redirect(url_for("grimm", awl=response[1], asl=response[2], nr=response[3], vr=response[4], avr=response[5],
                                 ajr=response[6]))
-    elif response[0] == "Issac Asimov":
+    elif response[0] == "Isaac Asimov":
         return redirect(url_for("asimov", awl=response[1], asl=response[2], nr=response[3], vr=response[4], avr=response[5],
                                 ajr=response[6]))
     elif response[0] == "H.P Lovecraft":
