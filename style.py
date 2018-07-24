@@ -110,8 +110,6 @@ def result():
     # get text from textbox
     data = request.form.get('text')
 
-    print(len(data))
-
     totalwords = []
     totalsent = []
     totaltags = []
